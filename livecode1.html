@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live coding challenge 1</title>
+    <style>
+        .btn{
+            background-color: rgb(2, 2, 35);
+            color: #fff;
+            font-size: 2rem;
+            padding: 1rem
+        }
+        .btn-calc{
+            background-color: rgb(2, 2, 35);
+            color: #fff;
+            font-size: 2rem;
+            padding: 1rem
+        }
+    </style>
+</head>
+<body>
+    <label for="num1"></label>
+    <input type="number" id="num1" value="num1">
+    <label for="num2"></label>
+    <input type="number" id="num2" value="num2">
+    <buttom class="btn" id="add">+</buttom>
+    <buttom class="btn" id="sub">-</buttom>
+    <buttom class="btn" id="multiply">*</buttom>
+    <buttom class="btn" id="divide">/</buttom>
+    <div class="output" id="output"></div>
+    <script>
+        const input1El= document.getElementById("num1");
+        const input2El= document.getElementById("num2");
+        const addEl= document.getElementById("add");
+        const subEl= document.getElementById("sub");
+        const multiplyEl= document.getElementById("multiply");
+        const divideEl= document.getElementById("divide");
+        const outputEl= document.getElementById("output");
+
+        function addFunc(){
+            outputEl.innerText= Number(input1El.value) + Number(input2El.value);
+        }
+        function subFunc(){
+            outputEl.innerText= Number(input1El.value) - Number(input2El.value);
+        }
+        function multiplyFunc(){
+            outputEl.innerText= Number(input1El.value) * Number(input2El.value);
+        }
+        function divideFunc(){
+            outputEl.innerText= Number(input1El.value) / Number(input2El.value);
+        }
+
+        addEl.addEventListener("click", addFunc)
+        subEl.addEventListener("click", subFunc)
+        multiplyEl.addEventListener("click", multiplyFunc)
+        divideEl.addEventListener("click", divideFunc)
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
